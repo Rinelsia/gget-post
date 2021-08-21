@@ -30,11 +30,7 @@ class AsinJAX
            // ajax.responseType = '';
             console.log('тело запроса = '+vl);
            ajax.send(vl);
-//            if(ajax.status != 200){
-//                alert(ajax.status)
-//            }else{
-//                var g = ajax.response;
-//            }
+//           
            ajax.onload = function(){
                let d = ajax.response;
                console.log('d = '+d);

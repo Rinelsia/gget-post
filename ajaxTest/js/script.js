@@ -27,9 +27,10 @@ function getAjax(ev){
     let  method = 'GET',
         res,
         sx = new AsinJAX(),
-        formData = new FormData(document.forms.post_name);
-    
-    sx.request(src, type, method, formData);
+        formData = new FormData(document.forms.get_name);
+    src = src+'/?name_get_nme='+formData.get('name_get_nme');
+    console.log('зарос гет = '+src);
+    sx.request(src, type, method, res);
     res = sx.result;
     console.log('Результат аякс = '+res);
 }
